@@ -1,0 +1,214 @@
+{%extends 'shop/basic.html'%}
+{% load static %}
+{%block title%}About Us {%endblock%}
+
+{%block css%}
+<style>
+    .carousel-inner img {
+        height: 93vh;
+        /* 50% of the viewport height */
+        object-fit: fill;
+
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        opacity: 0 !important;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        opacity: 0 !important;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: black !important;
+        mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M5.5 0l-5 4 5 4v-8z'/%3E%3C/svg%3E");
+        -webkit-mask-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='white' d='M5.5 0l-5 4 5 4v-8z'/%3E%3C/svg%3E");
+    }
+
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white !important;
+    }
+
+    .carousel-caption h1,
+    .carousel-caption h5,
+    .carousel-caption p {
+        color: white !important;
+        width: 80%;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .card {
+        border-radius: 25px;
+        height: 650px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card p {
+        text-align: justify;
+    }
+
+    @media (max-width: 768px) {
+        .carousel-caption h1 {
+            font-size: 1.5rem;
+        }
+
+        .carousel-caption h5 {
+            font-size: 1rem;
+        }
+
+        .card {
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+    }
+</style>
+{%endblock%}
+
+{%block body%}
+<main>
+    <div id="myCarousel" class="carousel slide mb-6 carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="3000">
+                <img src="{% static 'shop/images/carousel.jpg' %}" class="d-block w-100" alt="Slide 1">
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Welcome to Swiftcart </h1>
+                        <br>
+                        <h5 class="opacity-75"> Where shopping meets speed, style, and seamless convenience! Discover a
+                            world of exclusive deals, premium collections, and lightning-fast deliveries that redefine
+                            your online shopping experience. From trendsetting fashion to cutting-edge gadgets,
+                            Swiftcart brings you everything you need at unbeatable prices. Our platform is built for
+                            effortless browsing, secure payments, and instant checkout, ensuring you shop with
+                            confidence. Whether you're looking for daily essentials or luxury finds, Swiftcart has it
+                            all, wrapped in a smooth, hassle-free journey. Shop smart, shop fast – only on Swiftcart!
+                        </h5>
+                        <br>
+                        <p><a class="btn btn-lg btn-primary" href="/shop">Home</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item " data-bs-interval="3000">
+                <img src="{% static 'shop/images/carousel1.jpg' %}" class="d-block w-100" alt="Slide 1">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>About Us – Swiftcart</h1>
+                        <br>
+                        <h5>In February 2025, two brothers, Thanush Shetty and Lathesh Shetty, set out on a mission to
+                            redefine online shopping – and thus, Swiftcart was born! With a vision of creating an
+                            ultra-fast, user-friendly, and innovative e-commerce platform, we started from the ground
+                            up, designing every detail with passion and precision. From curating the best products to
+                            ensuring seamless transactions, we believe in making shopping swift, smart, and sensational!
+
+                            At Swiftcart, we bring you top-quality products, exciting deals, and a hassle-free shopping
+                            experience – all at your fingertips. Whether you’re hunting for trendy fashion, high-tech
+                            gadgets, or everyday essentials, we’ve got you covered with blazing-fast deliveries and 100%
+                            secure payments.
+
+                            Join us on this revolutionary journey as we transform the way you shop. Swiftcart – Because
+                            every second counts! </h5>
+                        <br>
+                        <p><a class="btn btn-lg btn-primary" href="/shop/about">About Us</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+                <img src="{% static 'shop/images/carousel2.jpg' %}" class="d-block w-100" alt="Slide 1">
+                <div class="container">
+                    <div class="carousel-caption text-end">
+                        <h1>Contact Us – We’re Here for You! </h1>
+                        <br>
+                        <h5>At Swiftcart, your satisfaction is our priority! Whether you have a question, feedback, or
+                            need assistance, we’re always here to help. Our team is dedicated to providing quick
+                            responses and seamless support, ensuring your shopping experience is as smooth as
+                            possible.We value every customer and look forward to assisting you. Swiftcart – Fast
+                            Shopping, Faster Support!</h5>
+                        <br>
+                        <p><a class="btn btn-lg btn-primary" href="/shop/contact">Contact Us</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container my-4">
+        <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-5 col-md-6 col-sm-12 my-3">
+                <div class="card p-4 shadow-lg border-0 d-flex align-items-center">
+                    <div class="text-center">
+                        <!-- Thanush Shetty's Card -->
+                        <img src="{% static 'shop/images/thanush.jpeg' %}" class="rounded-circle mb-3" width="200"
+                            height="200" alt="Thanush Shetty">
+                        <h2 class="fw-normal mt-3">Thanush Shetty</h2>
+                        <h5>Founder & CEO</h5>
+                        <p>A visionary entrepreneur with a passion for innovation, Thanush Shetty is the driving force
+                            behind Swiftcart. With a keen eye for technology and a deep understanding of e-commerce, he
+                            envisioned a fast, seamless, and customer-centric shopping platform. From conceptualizing
+                            the idea to overseeing operations, he ensures that Swiftcart stays ahead with cutting-edge
+                            solutions and exceptional service. His leadership and dedication fuel the company's mission
+                            to redefine online shopping and bring the best to customers across the globe.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lathesh  Card -->
+            <div class="col-lg-5 col-md-6 col-sm-12 my-3">
+                <div class="card p-4 shadow-lg border-0 d-flex align-items-center">
+                    <div class="text-center">
+                        <img src="{% static 'shop/images/lathesh.jpeg' %}" class="rounded-circle mb-3" width="200"
+                            height="200" alt="Lathesh Shetty">
+                        <h2 class="fw-normal mt-3">Lathesh Shetty</h2>
+                        <h5>Co-Founder & COO</h5>
+                        <p>As the Co-Founder & Chief Operating Officer, Lathesh Shetty plays a crucial role in ensuring
+                            that Swiftcart runs like a well-oiled machine. With a strong background in business
+                            operations and logistics, he focuses on efficiency, scalability, and customer satisfaction.
+                            His expertise in streamlining processes, managing supply chains, and enhancing user
+                            experience makes Swiftcart a trusted name in e-commerce. Together with his brother, he is
+                            committed to building a fast, reliable, and innovative shopping platform for the future.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+{%endblock%}
+{%block js%} <!-- jQuery (Required for Bootstrap 5 features) -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<!-- Bootstrap Bundle (Includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+{%endblock%}

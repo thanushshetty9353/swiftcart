@@ -1,0 +1,252 @@
+{%extends 'shop/basic.html'%}
+{% load static %}
+{%block title%}Contact Us {%endblock%}
+
+{%block css%}
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: url("{% static '/shop/images/bg_1.jpg' %}") no-repeat center center fixed;
+        background-size: cover;
+        color: rgb(0, 0, 0);
+    }
+
+    .container {
+        margin-top: 50px;
+    }
+
+    h1.heading-section {
+        font-size: 40px;
+        font-weight: bold;
+        color: rgb(0, 0, 0);
+    }
+
+    .wrapper {
+        background: rgba(64, 62, 62, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+
+    .info-wrap {
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .contact-wrap {
+        background: rgba(36, 33, 33, 0);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+
+    .info-wrap h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .dbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .dbox .icon {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .text {
+        display: flex;
+        align-items: center;
+        color: #ddd;
+    }
+
+    .text p {
+        margin-top: 8px;
+    }
+
+
+    .contact-wrap {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .contact-wrap h3 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: black;
+    }
+
+    .form-control {
+        border-radius: 5px;
+        height: 45px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    textarea.form-control {
+        height: 100px;
+        resize: none;
+    }
+
+
+    .btn-primary {
+        background: #007bff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn-primary:hover {
+        background: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+
+        .info-wrap,
+        .contact-wrap {
+            padding: 20px;
+        }
+    }
+
+    .fa {
+        font-size: 24px;
+    }
+</style>
+{%endblock%}
+
+
+{%block body%}
+
+<body>
+    <section class="ftco-section img bg-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h1 class="heading-section">Contact us</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+                    <div class="wrapper">
+                        <div class="row no-gutters justify-content-between">
+                            <div class="col-lg-6 d-flex align-items-stretch">
+                                <div class="info-wrap w-100 p-5">
+                                    <h3 class="mb-4">Contact us</h3>
+                                    <br>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-map-marker"></span>
+                                        </div>
+                                        <div class="text pl-4">
+                                            <p><span>Address:</span> Arkula,Farangipete post,Mangaluru tq,D.K.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-phone"></span>
+                                        </div>
+                                        <div class="text pl-4">
+                                            <p><span>Phone:</span> <a href="#">+91 8762722706</a></p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-paper-plane"></span>
+                                        </div>
+                                        <div class="text pl-4">
+                                            <p><span>Email:</span> <a
+                                                    href="/cdn-cgi/l/email-protection#7c15121a133c0513090e0f150819521f1311"><span
+                                                        class="__cf_email__"
+                                                        data-cfemail="b9d0d7dfd6f9c0d6cccbcad0cddc97dad6d4">thanushshetty7@gmail.com</span></a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="dbox w-100 d-flex align-items-start">
+                                        <div class="icon d-flex align-items-center justify-content-center">
+                                            <span class="fa fa-globe"></span>
+                                        </div>
+                                        <div class="text pl-4">
+                                            <p><span>Website</span> <a href="#">Swiftcart.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="contact-wrap w-100 p-md-5 p-4">
+                                    <h3 class="mb-4">Get in touch</h3>
+                                    <br>
+                                    <div id="form-message-warning" class="mb-4"></div>
+                                    <form method="post" action="/shop/contact/">{% csrf_token %}
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control" name="name" id="name"
+                                                        placeholder="Name">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-control" name="email" id="email"
+                                                        placeholder="Email">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <input type="phone" class="form-control" name="phone" id="phone"
+                                                        placeholder="Phone no.">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <textarea name="desc" class="form-control" id="desc" cols="30"
+                                                        rows="5" placeholder="Message"></textarea>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="col-md-12">
+                                                <br>
+                                                <div class="form-group">
+                                                    <input type="submit" value="Send Message" class="btn btn-primary">
+                                                    <div class="submitting"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+{%endblock%}

@@ -1,0 +1,86 @@
+{% extends 'shop/basic.html' %}
+
+{% block title %}{{ product.product_name }} - Swiftcart{% endblock %}
+
+{% block css %}
+<style>
+    .custom-container {
+        padding-top: 100px;
+    }
+
+    .custom-card {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+
+    .custom-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        /* Maintain aspect ratio while filling space */
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    /* Ensure card adjusts its size dynamically */
+    .custom-card .row {
+        align-items: stretch;
+        /* Ensure both columns stretch equally */
+    }
+
+    .custom-card .card-body {
+        padding: 25px;
+        /* Adjust padding inside card */
+    }
+</style>
+{% endblock %}
+
+{% block body %}
+<div class="container custom-container">
+    <div class="card custom-card ">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="/media/{{ product.image }}" class="img-fluid rounded-start" alt="{{ product.product_name }}">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title"><b></b>{{ product.product_name }}</b></h4>
+                    <p class="card-text">{{ product.desc }}</p>
+                    <h5><b>Rs {{product.price}}</b></h5>
+                    <br>
+                    <button id="pr{{i.id}}" class="btn btn-primary cart mx-4">Add to cart</button>
+                    <button id="pr{{i.id}}" class="btn btn-primary cart">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+{%block js%}
+<script>
+    if (localStorage.getItem('cart') == null) {
+        var cart = {};
+    }
+    else {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        document.getElementById('cart').innerHTML = Object.keys(cart).length;
+    }
+
+    $('.cart').click(function () {
+        console.log('clicked');
+        var idstr = this.id.toString();
+        console.log(idstr);
+        if (cart[idstr] != undefined) {
+            cart[idstr] = cart[idstr] + 1;
+        }
+        else {
+            cart[idstr] = 1;
+        }
+        console.log(cart);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    });
+</script>
+{%endblock%}
